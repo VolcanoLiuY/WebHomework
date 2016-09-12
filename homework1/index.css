@@ -21,6 +21,7 @@ h2 {
 img {
     margin:24px;
     border:3px solid gray;
+    border-radius:100%;
 }
 #word {
     word-spacing: 140px;
