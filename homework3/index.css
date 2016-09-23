@@ -14,7 +14,7 @@
     position: absolute;
     left: 650px;
     top: 480px;
-    opacity: 0; /*------!!-----*/
+    opacity: 0;
     overflow: hidden;
     -webkit-transition:all 0.5s linear;
     -moz-transition:all 0.5s linear;
@@ -78,7 +78,7 @@
     position: absolute;
     left: 650px;
     top: 480px;
-    opacity: 0; /*------!!-----*/
+    opacity: 0;
     -webkit-transition:all 0.5s linear;
     -moz-transition:all 0.5s linear;
     -o-transition:all 0.5s linear;
