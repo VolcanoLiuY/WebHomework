@@ -1,0 +1,164 @@
+h1,h2 {
+    text-align: center;
+}
+
+#maze {
+    /*border: 1px solid red;*/
+    height: 300px;
+    width: 500px;
+    margin: 0 auto;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.areaTop {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: 498px;
+    height: 49px; 
+}
+
+.wall {
+    background: #EEEEEE;
+    margin: 0px;
+    padding: 0px;
+}
+
+#redWall {
+    background: red;
+    margin: 0px;
+    padding: 0px;
+}
+
+.path {
+    padding: 0px;
+    margin: 0px;
+}
+
+.area1, .area2 {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: 148px;
+    height: 50px;
+}
+
+.path3 {
+    border-top: 1px solid black;
+    height: 49px;
+    width: 200px;
+    position: relative;
+    float: left;
+}
+
+.area3, .area5{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 148px;
+    height: 99px;
+}
+
+.path2, .path4 {
+    height: 100px;
+    width: 50px;
+    float: left;
+}
+
+.area4 {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    height: 99px;
+    width: 98px;
+    float: left;
+}
+
+.area1, .area3{
+    float: left;
+}
+
+.area2, .area5{
+    float: right;
+}
+
+.path1 {
+    border-bottom: 1px solid black;
+    height: 49px;
+    width: 200px;
+    float: left;
+}
+
+.path5 {
+    border-bottom: 1px solid black;
+    height: 49px;
+    width: 200px;
+    float: right;
+}
+.area6 {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    height: 50px;
+    width: 98px;
+    float: left;
+}
+
+.areaButton {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: 498px;
+    height: 49px;
+    float: left;
+}
+
+
+#intro {
+    text-align: center;
+}
+
+#eWall {
+    border: 1px solid black;
+    height: 20px;
+    width: 80px;
+    background: #EEEEEE;
+    margin: 0 auto;
+}
+
+#end {
+    position: relative;
+    left: 31%;
+}
+
+#s, #e {
+    border: 1px solid black;
+    height: 38px;
+    width: 38px;
+    z-index: 1;
+    font-size: 40px;
+    text-align: center;
+    padding: 3px;
+}
+
+#s {
+    position:  absolute;
+    top:367px;
+    left: 390px;
+    background: #82FF7E;
+}
+
+#e {
+    position: absolute;
+    top:367px;
+    left:844px;
+    background: #8684ff;
+}
+
+#notice {
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+

@@ -1,0 +1,41 @@
+#button  {
+    border:3px black solid;
+    padding: 0px;
+    margin: 0px;
+}
+
+#outer {
+    border: 5px black solid;
+    position: absolute;
+    text-align: center;
+    width: 500px;
+    left: 30%;
+}
+
+#input {
+    margin: 1%;
+    background: white;
+    height: 60px;
+    font-size: 40px;
+    border: groove 5px gray;
+    text-align: right;
+    width: 480px;
+    padding: 10px;
+}
+
+#button {
+    margin: 2%;
+    padding: 2%;
+    font-size: 30px;
+}
+
+button {
+    margin: 1%;
+    font-size: 60px;
+    width: 85px;
+}
+
+#CE {
+    padding: 0px;
+    margin: 0px;
+}

@@ -1,0 +1,94 @@
+#what-a-mole {
+    margin: 0 auto;
+    width: 600px;
+    padding: 0px;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+h1 {
+    margin-top:50px; 
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+#start {
+    position: absolute;
+    left:480px;
+    top:110px;
+    /*display: inline;*/
+}
+
+#Time {
+    position: absolute;
+    top:97px;
+    left:650px;
+}
+
+#time {
+    position: absolute;
+    top: 110px;
+    left:700px;
+    width: 50px;
+}
+#status {
+    position: absolute;
+    top: 135px;
+    left: 480px;
+    width: 100px;
+}
+
+#Score {
+    position: absolute;
+    top: 122px;
+    left: 650px;
+}
+#score {
+    position: absolute;
+    top:135px;
+    left: 700px;
+    width: 50px;
+}
+
+#maze {
+    /*border: 1px solid black;*/
+    position: absolute;
+    top:170px;
+    left: 400px;
+    width: 500px;
+    height: 300px;
+}
+
+#instructions {
+    position: absolute;
+    top: 500px;
+}
+
+.hole {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
