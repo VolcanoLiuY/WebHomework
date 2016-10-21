@@ -1,0 +1,127 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    text-align: center;
+    margin: 40px;
+}
+
+#gameArea {
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    /*border: 5px solid gray;*/
+    overflow: hidden;
+
+}
+
+.pic {
+    margin: 0px;
+    padding: 0px;
+    height: 96px;
+    width: 96px;
+    border: 2px solid white;
+    background-image: url("../image/pic.png");
+    background-repeat: no-repeat;
+    background-size: 400px 400px;
+}
+
+.r1 {
+    position: absolute;
+    top: 117px;
+}
+
+.r2 {
+    position: absolute;
+    top: 217px;
+}
+
+.r3 {
+    position: absolute;
+    top: 317px;
+}
+
+.r4 {
+    position: absolute;
+    top: 417px;
+}
+
+.c1{
+    left: 440px;
+}
+
+.c2{
+    left: 540px;
+}
+
+.c3{
+    left: 640px;
+}
+
+.c4{
+    left: 740px;
+}
+
+
+input {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 20px; 
+    position: absolute;
+    left: 610px;
+}
+
+
+#p1 {
+    background-position: 0px 0px;
+}
+#p2 {
+    background-position: -100px 0px;
+}
+#p3 {
+    background-position: -200px 0px;
+}
+#p4 {
+    background-position: -300px 0px;
+}
+#p5 {
+    background-position: 0px -100px;
+}
+#p6 {
+    background-position: -100px -100px;
+}
+#p7 {
+    background-position: -200px -100px;
+}
+#p8 {
+    background-position: -300px -100px;
+}
+#p9 {
+    background-position: 0px -200px;
+}
+#p10 {
+    background-position: -100px -200px;
+}
+#p11 {
+    background-position: -200px -200px;
+}
+#p12 {
+    background-position: -300px -200px;
+}
+#p13 {
+    background-position: 0px -300px;
+}
+#p14 {
+    background-position: -100px -300px;
+}
+#p15 {
+    background-position: -200px -300px;
+}
+#p16 {
+    background:#dddddd;
+}
+
+
