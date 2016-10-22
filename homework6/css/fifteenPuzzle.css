@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    /*background-color: black;*/
 }
 
 h1{
@@ -72,6 +73,8 @@ input {
     margin-top: 20px; 
     position: absolute;
     left: 610px;
+    /*color: #666666;*/
+    /*border: 2px solid gray;*/
 }
 
 
