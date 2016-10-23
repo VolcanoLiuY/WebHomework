@@ -127,4 +127,22 @@ input {
     background:#dddddd;
 }
 
+#hint{
+    float: right;
+    font-size: 20px;
+    width: 100px;
+    background-size: 100px 100px;
+    position: relative;
+    color: rgb(48, 240, 255);
+}
 
+#hint:hover{
+    background-image: url("../image/pic.png");
+    float: right;
+    height: 100px;
+    width: 100px;
+    background-size: 100px 100px;
+    border: 1px solid black;
+    position: relative;
+    font-size: 0px;
+}
