@@ -11,9 +11,9 @@
 * [homework3-Ring Meun] (https://github.com/VolcanoLiuY/WebHomework/issues/3)
 
 * [homework4-Calculator]
-*  
+
 * [homework5-maze &mole]
-* 
+ 
 * [homework5-fifteen puzzle] 
 
   The relevant data 
