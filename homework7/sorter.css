@@ -1,0 +1,31 @@
+
+table {
+	padding: 0px;
+	margin: 0px;
+	border: 1px solid #dcdcdc;
+}
+th {
+	padding: 0px;
+	background-color: #071a7f;
+	color:white;
+	width: 200px;
+	
+}
+
+.alternate {
+	background-color: #dcdcdc;
+}
+
+#Ascend {
+    background-color: #a3b0fc;
+    background-image: url("image/ascend.png");
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+}
+#Descend {
+    background-color: #a3b0fc;
+    background-image: url("image/descend.png");
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+}
+
