@@ -6,21 +6,23 @@ $(document).ready(function () {
 var database = {A:false, B:false, C:false, D:false, E:false}
 var robot = ['A', 'B', 'C', 'D', 'E'];
 var number = [0, 0, 0, 0, 0];
+var req = new Array;
+
 function done(i) {
   // waiting(i);
-  $.get("127.0.0.1",function (data, textStatus, jqXHR) {
+  req[0] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
     excuting(i, data);
     i++;
-    $.get("127.0.0.1",function (data, textStatus, jqXHR) {
+    req[1] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
       excuting(i, data);
       i++;
-      $.get("127.0.0.1",function (data, textStatus, jqXHR) {
+      req[2] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
         excuting(i, data);
         i++;
-        $.get("127.0.0.1",function (data, textStatus, jqXHR) {
+        req[3] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
           excuting(i, data);
           i++;
-          $.get("127.0.0.1",function (data, textStatus, jqXHR) {
+          req[4] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
             excuting(i, data);
             i++;
             for (var j = 0; j < 5; j++) {
@@ -96,6 +98,9 @@ function calculate() {
 }
 
 function reset() {
+  for (var i = 0; i < 5; i++) {
+    if (req[i]) req[i].abort();
+  }
   $(".unread").css("opacity","0");
   $("#info-bar").html(" ");
   changStyle(".button", "blue");
