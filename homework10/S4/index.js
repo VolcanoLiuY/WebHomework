@@ -6,10 +6,11 @@ $(document).ready(function () {
 var database = {A:false, B:false, C:false, D:false, E:false}
 var robot = ['A', 'B', 'C', 'D', 'E'];
 var order = [0, 1, 2, 3, 4];
+var req;
 
 function done(i, j) {
   waiting(i);
-  $.get("127.0.0.1",
+  req = $.get("127.0.0.1",
     function (data, textStatus, jqXHR) {
       excuting(i, data);
         if (j == 4) {
@@ -99,6 +100,7 @@ function reset() {
   $(".unread").css("opacity","0");
   $("#info-bar").html(" ");
   $("#order").html(" ");
+  if (req) req.abort();
   changStyle(".button", "blue");
   changStyle(".result", "gray");
 }

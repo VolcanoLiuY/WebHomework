@@ -5,10 +5,11 @@ $(document).ready(function () {
 
 var database = {A:false, B:false, C:false, D:false, E:false}
 var robot = ['A', 'B', 'C', 'D', 'E'];
+var req;
 
 function done(i) {
   waiting(i);
-  var req = $.get("127.0.0.1",
+  req = $.get("127.0.0.1",
     function (data, textStatus, jqXHR) {
       excuting(i, data);
         if (i == 4) {
@@ -73,6 +74,7 @@ function calculate() {
 function reset() {
   $(".unread").css("opacity","0");
   $("#info-bar").html(" ");
+  if (req) req.abort();
   changStyle(".button", "blue");
   changStyle(".result", "gray");
 }
