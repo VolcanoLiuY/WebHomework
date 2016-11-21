@@ -6,6 +6,7 @@ $(document).ready(function () {
 
 var database = {A:false, B:false, C:false, D:false, E:false}
 var isDoing = false;
+var req;
 function getRandomNumber(e) {
   var e = e.target;
   if (isDoing) return;
@@ -16,7 +17,7 @@ function getRandomNumber(e) {
 function done(e) {
   isDoing = true;
   waiting(e);
-  var req = $.get("127.0.0.1",
+  req = $.get("127.0.0.1",
     function (data, textStatus, jqXHR) {
       excuting(e, data);
       isDoing = false;
@@ -75,9 +76,9 @@ function calculate() {
 function reset() {
   for (var key in database) database[key] = false;
   isDoing = false;
+  if (req) req.abort();
   $(".unread").css("opacity","0");
   $("#info-bar").html(" ");
   changStyle(".button", "blue");
   changStyle(".result", "gray");
-  if (req) req.abort();
 }
