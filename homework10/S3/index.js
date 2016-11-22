@@ -9,35 +9,33 @@ var number = [0, 0, 0, 0, 0];
 var req = new Array;
 
 function done(i) {
-  // waiting(i);
   req[0] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
-    excuting(i, data);
-    i++;
-    req[1] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
-      excuting(i, data);
-      i++;
-      req[2] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
-        excuting(i, data);
-        i++;
-        req[3] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
-          excuting(i, data);
-          i++;
-          req[4] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
-            excuting(i, data);
-            i++;
+    excuting(0, data);
+    setTimeout(function() {
+      req[1] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
+      excuting(1, data);
+      setTimeout(function() {
+        req[2] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
+        excuting(2, data);
+        setTimeout(function() {
+          req[3] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
+          excuting(3, data);
+          setTimeout(function() {
+            req[4] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
+            excuting(4, data);
             for (var j = 0; j < 5; j++) {
               $('#'+robot[j]+' .unread').html(number[j]);
             }
             getNmuberSum();
+            });
+          }, 1000);
           });
+        }, 1000);
         });
+      }, 1000);
       });
-    });
+    }, 1000);
   });
-      // for (var j = 0; j < 5; j++) {
-      //   $('#'+robot[j]+' .unread').html(number[j]);
-      // }
-      // getNmuberSum();
 }
 
 function getRandomNumber() {
