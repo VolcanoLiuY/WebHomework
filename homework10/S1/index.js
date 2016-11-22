@@ -17,7 +17,7 @@ function getRandomNumber(e) {
 function done(e) {
   isDoing = true;
   waiting(e);
-  req = $.get("127.0.0.1",
+  req = $.get("localhost",
     function (data, textStatus, jqXHR) {
       excuting(e, data);
       isDoing = false;

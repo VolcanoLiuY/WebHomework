@@ -9,19 +9,19 @@ var number = [0, 0, 0, 0, 0];
 var req = new Array;
 
 function done(i) {
-  req[0] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
+  req[0] = $.get("localhost",function (data, textStatus, jqXHR) {
     excuting(0, data);
     setTimeout(function() {
-      req[1] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
+      req[1] = $.get("localhost",function (data, textStatus, jqXHR) {
       excuting(1, data);
       setTimeout(function() {
-        req[2] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
+        req[2] = $.get("localhost",function (data, textStatus, jqXHR) {
         excuting(2, data);
         setTimeout(function() {
-          req[3] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
+          req[3] = $.get("localhost",function (data, textStatus, jqXHR) {
           excuting(3, data);
           setTimeout(function() {
-            req[4] = $.get("127.0.0.1",function (data, textStatus, jqXHR) {
+            req[4] = $.get("localhost",function (data, textStatus, jqXHR) {
             excuting(4, data);
             for (var j = 0; j < 5; j++) {
               $('#'+robot[j]+' .unread').html(number[j]);

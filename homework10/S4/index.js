@@ -10,7 +10,7 @@ var req;
 
 function done(i, j) {
   waiting(i);
-  req = $.get("127.0.0.1",
+  req = $.get("localhost",
     function (data, textStatus, jqXHR) {
       excuting(i, data);
         if (j == 4) {
