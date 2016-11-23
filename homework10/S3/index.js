@@ -12,10 +12,14 @@ function done(i,callback) {
   function (data, textStatus) {
     console.log(data);
     excuting(i, data);
+    if (i) {
+      console.log(data);
+      getNmuberSum();
+    }
   });
-  if (i == 4) {
-          getNmuberSum();
-        }
+  // if (i == 4) {
+  //   getNmuberSum();
+  // }
 }
 
 function getRandomNumber() {
@@ -48,6 +52,7 @@ function changStyle(e,color) {
 function getNmuberSum() {
   if (canCalculate()) {
   var sum = calculate();
+  console.log(sum);
   $('.result').html(sum);
   changStyle(".result", "gray");
   }
