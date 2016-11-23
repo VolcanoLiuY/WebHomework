@@ -6,60 +6,34 @@ $(document).ready(function () {
 var database = {A:false, B:false, C:false, D:false, E:false}
 var robot = ['A', 'B', 'C', 'D', 'E'];
 var number = [0, 0, 0, 0, 0];
-var req = new Array;
-
-function done(i) {
-  req[0] = $.get("localhost",function (data, textStatus, jqXHR) {
-    excuting(0, data);
-    setTimeout(function() {
-      req[1] = $.get("localhost",function (data, textStatus, jqXHR) {
-      excuting(1, data);
-      setTimeout(function() {
-        req[2] = $.get("localhost",function (data, textStatus, jqXHR) {
-        excuting(2, data);
-        setTimeout(function() {
-          req[3] = $.get("localhost",function (data, textStatus, jqXHR) {
-          excuting(3, data);
-          setTimeout(function() {
-            req[4] = $.get("localhost",function (data, textStatus, jqXHR) {
-            excuting(4, data);
-            for (var j = 0; j < 5; j++) {
-              $('#'+robot[j]+' .unread').html(number[j]);
-            }
-            getNmuberSum();
-            });
-          }, 1000);
-          });
-        }, 1000);
-        });
-      }, 1000);
-      });
-    }, 1000);
+function done(i,callback) {
+  waiting(i);
+  $.get("rand_num"+i,
+  function (data, textStatus) {
+    console.log(data);
+    excuting(i, data);
   });
+  if (i == 4) {
+          getNmuberSum();
+        }
 }
 
 function getRandomNumber() {
-  console.log(robot[0]);
-  done(0);
-  waiting();
+  for (var i = 0; i < 5; i++) {
+    done(i);
+  }
 }
-
 
 
 function waiting(i) {
   changStyle(".button", "gray");
-  $('.unread').css("opacity","1");
-  $('.unread').html("...");
+  $('#'+robot[i]+' .unread').css("opacity","1");
+  $('#'+robot[i]+' .unread').html("...");
 }
-// function waiting(i) {
-//   changStyle(".button", "gray");
-//   $('#'+robot[i]+' .unread').css("opacity","1");
-//   $('#'+robot[i]+' .unread').html("...");
-// }
 
 function excuting(i, data) {
-  console.log(data);
   number[i] = data;
+  $('#'+robot[i]+' .unread').html(number[i]);
   database[robot[i]] = true;
   for (var key in database) {
     if ( database[key]) changStyle("#"+key, "gray");
@@ -96,9 +70,6 @@ function calculate() {
 }
 
 function reset() {
-  for (var i = 0; i < 5; i++) {
-    if (req[i]) req[i].abort();
-  }
   $(".unread").css("opacity","0");
   $("#info-bar").html(" ");
   changStyle(".button", "blue");
