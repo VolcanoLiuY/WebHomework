@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  div.whole
+    div.block
+      span.item 用户名:
+      span#username.content #{username}
+    div.block
+      span.item 学号:
+      span#sid.content #{sid}
+    div.block
+      span.item 电话:
+      span#phone.content #{phone}
+    div.block
+      span.item 邮箱:
+      span#email.content #{email}
+    button.logout 退出登录
+
+append css
+  link(rel='stylesheet', href='/stylesheets/detail.css')
+
+append script
+  script(src='/javascripts/notice.js')
+  script(src='/javascripts/logout.js')

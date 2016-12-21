@@ -1,0 +1,45 @@
+
+* {
+  margin: 0 auto;
+}
+
+.whole {
+  padding: 8px;
+  position: absolute;
+  left: 450px;
+  top:100px;
+  color: black;
+}
+
+div {
+   margin: 20px;
+}
+
+.input{
+  margin-left: 24px;
+}
+
+#username {
+  margin-left: 16px;
+}
+
+#repeat {
+  margin-left: 0px;
+}
+.hint {
+  position: absolute;
+  left: 250px;
+  width: 300px;
+  display: inline;
+  margin-left: 10px;
+  color: #CC0033;
+}
+
+.link {
+  margin-top: 20px;
+}
+.submit , .clear{
+  position: relative;
+  top:40px;
+  color: orangered;
+}

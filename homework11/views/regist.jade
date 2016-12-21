@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  div.whole
+    form(method='post')
+      div
+      label.inside(for= 'username') 用户名:
+        span.hint
+      input.input(id= 'username' name= 'username')
+      div
+      label.inside(for= 'password') 密 码 :
+        span.hint
+      input.input(id= 'password' name= 'password' type ='password')
+      div
+      label.inside(for= 'repeat') 重复密码:
+        span.hint
+      input.input(id= 'repeat' name= 'repeat' type ='password')
+      div
+      label.inside(for= 'sid') 学 号 :
+        span.hint
+      input.input(id= 'sid' name= 'sid')
+      div
+      label.inside(for= 'phone') 电 话 :
+        span.hint
+      input.input(id= 'phone' name= 'phone')
+      div
+      label.inside(for= 'email') 邮 箱 :
+        span.hint
+      input.input(id= 'email' name= 'email')
+      input.submit(type='submit', value='注册')
+      input.clear(type='reset', value='重置')
+    p.link
+      | 已经有帐号?
+      a(href='/') 立即登录
+
+append script
+  script(src='/javascripts/validator.js')
+  script(src='/javascripts/notice.js')
+  script(src='/javascripts/regist.js')
+  script(src='http://cdn.bootcss.com/jsSHA/2.2.0/sha512.js')
+
+append css
+  link(rel='stylesheet', href='/stylesheets/regist.css')
+

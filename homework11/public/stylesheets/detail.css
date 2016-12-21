@@ -1,0 +1,34 @@
+* {
+  /*font: 20px solid black;*/
+  margin: 0 auto;
+}
+
+.whole {
+  padding: 8px;
+  border: 2px groove black;
+  position: absolute;
+  left: 450px;
+  top:100px;
+  color: dimgray;
+  font-size: 20px;
+}
+
+.block {
+  padding: 10px;
+  margin: 10px;
+}
+.item {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.content {
+  color: dimgrey;
+  font-family: Courier New, Courier, monospace;
+}
+.logout {
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-left: 80px;
+}

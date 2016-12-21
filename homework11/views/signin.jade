@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div.whole
+    form(method='post')
+      div.field
+      label(for='username') 用户名:
+        input(id='username', name='username')
+
+      div.field
+      label(for='password')   密 码 :
+        input.m(id='password', name='password' type ='password')
+
+      input.submit(type='submit', value='登录')
+      input.clear(type='reset', value='重置')
+    p.link
+      | 还没有帐号?
+      a(href='/regist') 注册一个
+
+
+append css
+  link(rel='stylesheet', href='/stylesheets/signin.css')
+
+append script
+  script(src='http://cdn.bootcss.com/jsSHA/2.2.0/sha512.js')
+  script(src='/javascripts/notice.js')
+  script(src='/javascripts/signin.js')
